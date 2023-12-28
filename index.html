@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Your App Name">
+<meta name="apple-mobile-web-app-title" content="Your App Name">
+<link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <title>Raja Mind Mart</title>
+  <link rel="shortcut icon" href="image/-favicon-Html" type="image/x-icon">
+
+  <!--favicon-->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+<link rel="manifest" href="Favicon/site.webmanifest">
+<link rel="mask-icon" href="Favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><!-- Add this inside the head tag of your HTML file -->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch((error) => {
+        console.error('Service Worker registration failed:', error);
+      });
+      
+  }
+</script>
+
+<body>
+  <div id="app-container">
+    <div id="title-bar">
+      <h1>Raja Mind Mart</h1>
+    </div>
+    <div id="menu-bar">
+      <button id="back-button">Back</button>
+      <button id="main-menu-button">Main Menu</button>
+      <button id="save-button">Save</button>
+      <button id="record-button">Record</button>
+    </div>
+    <div id="heading-bar">
+      <button class="heading-button" data-heading="vegetables">Vegetables</button>
+      <button class="heading-button" data-heading="fruits">Fruits</button>
+      <button class="heading-button" data-heading="drinks">Drinks</button>
+      <button class="heading-button" data-heading="meats">Meats</button>
+      <button class="heading-button" data-heading="others">Others</button>
+    </div>
+    <div id="list-container">
+      <!-- The list items will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Add the modal markup -->
+  <div id="confirmModal">
+    <p>Are you sure you want to delete this cell?</p>
+    <button id="confirmDelete">Delete</button>
+    <button id="cancelDelete">Cancel</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
